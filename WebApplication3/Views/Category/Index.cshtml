@@ -1,0 +1,102 @@
+﻿@model IEnumerable<WebApplication3.Models.Category>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="col-xs-12 col-md-9">
+    <div class="row">
+
+        @foreach (var cat in Model)
+        {
+            if (cat.CatName == "Sport")
+            { 
+            <div class="col-xs-40 col-md-10">
+                <div class="thumbnail">
+                    
+                    <img class="img-responsive" src="~/Content/circle-flat-general-54569d12b-512.png">
+                    <div class="caption text-center">
+                        <p>
+                            <b></b> <span>@cat.CatId</span>
+                        </p>
+                        <p>
+                            <b>Category name:</b> <span>@cat.CatName</span>
+                        </p>
+                        <p class="text-center">
+                            @Html.ActionLink("Shop", "index", "Product1", new { id = cat.CatId }, new { @class = "btn btn-info" })
+                        </p>
+                    </div>
+                </div>
+            </div>
+        <br />
+          
+            }
+            else if (cat.CatName == "Furnture")
+            {
+                <div class="col-xs-40 col-md-10">
+                    <div class="thumbnail">
+                    
+                        <img class="img-responsive" src="~/Content/R134cc8095491255e37259c0a8d9b4ffd.png">
+                        <div class="caption text-center">
+                            <p>
+                                <b></b> <span>@cat.CatId</span>
+                            </p>
+                            <p>
+                                <b>Category name:</b> <span>@cat.CatName</span>
+                            </p>
+                            <p class="text-center">
+                                @Html.ActionLink("Shop", "index", "Product2", new { id = cat.CatId }, new { @class = "btn btn-info" })
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    <br />
+            }
+            else if (cat.CatName == "Beauty")
+            {
+                <div class="col-xs-40 col-md-10">
+                    <div class="thumbnail">
+                        
+                        <img class="img-responsive" src="~/Content/R09cc8ffb72a8a06f5b3d19eade56d969.png">
+                        <div class="caption text-center">
+                            <p>
+                                <b></b> <span>@cat.CatId</span>
+                            </p>
+                            <p>
+                                <b>Category name:</b> <span>@cat.CatName</span>
+                            </p>
+                            <p class="text-center">
+                                @Html.ActionLink("Shop", "index", "Product3", new { id = cat.CatId }, new { @class = "btn btn-info" })
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    <br />
+            }
+            else if (cat.CatName == "Cloth")
+            {
+                <div class="col-xs-40 col-md-10">
+                    <div class="thumbnail">
+                      
+                        <img class="img-responsive" src="~/Content/Ra9ebf6311aa8a109b1fdb1069bd95d09.png">
+                        <div class="caption text-center">
+                            <p>
+                                <b></b> <span>@cat.CatId</span>
+                            </p>
+                            <p>
+                                <b>Category name:</b> <span>@cat.CatName</span>
+                            </p>
+                            <p class="text-center">
+                                @Html.ActionLink("Shop", "Index", "Products", new { id = cat.CatId }, new { @class = "btn btn-info" })
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            }
+
+        }
+        
+        </div>
+    </div>

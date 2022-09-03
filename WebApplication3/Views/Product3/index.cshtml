@@ -1,0 +1,62 @@
+﻿@model IEnumerable<WebApplication3.Models.Product3>
+@{
+    ViewBag.Title = "Product3";
+}
+
+<h2>Product3</h2>
+
+<div class="col-xs-12 col-md-9">
+    <div class="row">
+
+
+        @foreach (var product3 in Model)
+        {
+
+            <div class="col-xs-12 col-md-3">
+                <div class="thumbnail">
+                    @if (product3.ProductId == 1)
+                    {
+                        <img class="img-responsive" src="~/Content/R8c4f8aa4b3fccf0a72c912cf0cdd1b3b.png">
+                    }
+                    else if (product3.ProductId == 2)
+                    {
+                        <img class="img-responsive" src="~/Content/R4964347b417f327c8b8798d4e492ad5e.png">
+                    }
+                    else if (product3.ProductId == 3)
+                    {
+                        <img class="img-responsive" src="~/Content/Ra9ebf6311aa8a109b1fdb1069bd95d09.png">
+                    }
+                    
+                    <div class="caption text-center">
+                        <p>
+                            <b>Name:</b> <span>@product3.ProductTitle</span>
+                        </p>
+                        <p>
+                            <b>Price:</b> <span>@product3.ProductPrice USD</span>
+                        </p>
+                        <p class="text-center">
+                            <button type="button" class="like-button" title="Click to like this post!">
+                                <i class="fa fa-thumbs-up"></i> Like
+
+                                <span class="like-count"></span>
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .like-button {
+                    background-color: white;
+                    color: black;
+                }
+
+                    .like-button:hover {
+                        background-color: red;
+                        color: black;
+                    }
+            </style>
+        }
+    </div>
+</div>
+      
+
